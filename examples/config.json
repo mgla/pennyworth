@@ -1,0 +1,10 @@
+{
+	"macs": {
+		"1c:39:47:76:9f:50": "play",
+		"00:11:22:33:44:55": "play"
+	},
+	"play": {
+		"command": "/usr/bin/play",
+		"parameters": ["-q"]
+	}
+}

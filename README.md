@@ -17,6 +17,13 @@ TBD.
 
 ## Development
 
+Quick overview:
+
+* vagrant up
+* ssh into VM with either `vagrant ssh` or directly.
+* Go to /home/vagrant/pennyworth
+* ./manage.py runserver 0.0.0.0:8000
+
 ### Vagrant
 
 Install vagrant and a virtualization provider.

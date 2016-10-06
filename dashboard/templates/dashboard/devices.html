@@ -1,0 +1,18 @@
+<h1> List of devices </h1>
+{% if device_list %}
+<ul>
+	{% for device in device_list %}
+		<div>
+		<a href="{% url 'dashboard:device' device.id %}">{{ device.label }}</a>
+		<form action="{% url 'dashboard:device_change_label' device.id %}" method="post">
+			{% csrf_token %}
+			<input type="text" name="label" id="label{{ forloop.counter }}" value="{{ device.label }}" />
+			<label for="device{{ forloop.counter }}">{{ device.label }}</label><br />
+			<input type="submit" value="Save" />
+		</form>
+		</div>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No devices in database.</p>
+{% endif %}
